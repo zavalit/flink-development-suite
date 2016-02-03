@@ -1,3 +1,27 @@
+java8:
+ image: flinkdevelopmentsuite_java8
+ extends:
+   file: ./java8/docker-compose.yml
+   service: java8
+
+flink:
+ image: flinkdevelopmentsuite_flink
+ extends:
+   file: ./flink/docker-compose.yml
+   service: flink
+
+flinkdev:
+ image: flinkdevelopmentsuite_flinkdev
+ extends:
+   file: ./flinkdev/docker-compose.yml
+   service: flinkdev
+
+training:
+ image: flinkdevelopmentsuite_training
+ extends:
+   file: ./training/docker-compose.yml
+   service: training
+
 emacs:
   image: flinkdevelopmentsuite_emacs
   extends:

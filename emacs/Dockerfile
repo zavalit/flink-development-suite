@@ -1,4 +1,4 @@
-FROM zavalit/training 
+FROM flinkdevelopmentsuite_training 
 
 ENV EMACS_VERSION="24.5"
 ENV EMACS_USER=dev 

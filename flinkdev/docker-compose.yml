@@ -1,0 +1,3 @@
+---
+  flinkdev:
+    build: .

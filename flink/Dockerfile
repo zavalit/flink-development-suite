@@ -1,5 +1,4 @@
-FROM zavalit/java8
-
+FROM flinkdevelopmentsuite_java8
 
 ENV LAST_UPDATE 27-01-2016
 ENV FLINK_VERSION=0.10.1

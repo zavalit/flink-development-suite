@@ -1,4 +1,4 @@
-FROM zavalit/dev
+FROM flinkdevelopmentsuite_flinkdev
 
 ENV LAST_UPDATE 28-01-2016
 ENV TRAINING_USER dev
