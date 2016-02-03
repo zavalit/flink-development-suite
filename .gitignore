@@ -1,2 +1,6 @@
 emacs/.ivy2
-.sbt/boot
+emacs/.sbt/boot
+emacs/.emacs.d/auto-save-list
+emacs/.emacs.d/elpa
+emacs/.emacs.d/ensime
+
