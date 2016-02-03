@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="org.netbeans.api"
+		module="org-netbeans-modules-parsing-api"
+		revision="RELEASE731"
+		status="release"
+		publication="20130708204054"
+	>
+		<description homepage="" />
+		<e:sbtTransformHash>955739f09783c96ce4cd4718a950322a230159c5</e:sbtTransformHash>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="org-netbeans-modules-parsing-api" type="jar" ext="jar" conf="master"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.netbeans.api" name="org-netbeans-api-annotations-common" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-api-java-classpath" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-api-progress" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-libs-lucene" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-editor-lib" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-editor-lib2" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-editor-mimelookup" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.modules" name="org-netbeans-modules-editor-settings-storage" rev="RELEASE731" force="true" conf="runtime->compile(*),runtime(*),master(compile)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-editor-util" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-lexer" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.modules" name="org-netbeans-modules-masterfs" rev="RELEASE731" force="true" conf="runtime->compile(*),runtime(*),master(compile)"/>
+		<dependency org="org.netbeans.modules" name="org-netbeans-modules-parsing-lucene" rev="RELEASE731" force="true" conf="runtime->compile(*),runtime(*),master(compile)"/>
+		<dependency org="org.netbeans.modules" name="org-netbeans-modules-project-indexingbridge" rev="RELEASE731" force="true" conf="runtime->compile(*),runtime(*),master(compile)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-projectapi" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-projectuiapi" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-queries" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-modules-sampler" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-netbeans-spi-tasklist" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-awt" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-filesystems" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-loaders" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-modules" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-nodes" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-text" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-util" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-util-lookup" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.netbeans.api" name="org-openide-windows" rev="RELEASE731" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+	</dependencies>
+</ivy-module>
