@@ -1,0 +1,24 @@
+java8:
+ extends:
+   file: ./java8/docker-compose.yml
+   service: java8
+
+flink:
+ extends:
+   file: ./flink/docker-compose.yml
+   service: flink
+
+flinkdev:
+ extends:
+   file: ./flinkdev/docker-compose.yml
+   service: flinkdev
+
+training:
+ extends:
+   file: ./training/docker-compose.yml
+   service: training
+
+emacs:
+  extends:
+    file: ./emacs/docker-compose.yml
+    service: emacs
