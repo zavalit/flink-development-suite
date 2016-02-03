@@ -1,0 +1,5 @@
+emacs:
+  image: flinkdevelopmentsuite_emacs
+  extends:
+    file: ./emacs/docker-compose.yml
+    service: emacs
