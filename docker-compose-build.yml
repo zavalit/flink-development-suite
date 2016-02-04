@@ -4,21 +4,29 @@ java8:
    service: java8
 
 flink:
+ links:
+  - java8
  extends:
    file: ./flink/docker-compose.yml
    service: flink
 
 flinkdev:
+ links:
+   - flink
  extends:
    file: ./flinkdev/docker-compose.yml
    service: flinkdev
 
 training:
+ links:
+   - flinkdev
  extends:
    file: ./training/docker-compose.yml
    service: training
 
 emacs:
+  links:
+   - training
   extends:
     file: ./emacs/docker-compose.yml
     service: emacs
