@@ -62,18 +62,18 @@ ubuntu                           trusty              6cc0fc2a5ee3        2 weeks
 ```
 
 
-1. Java8
+1. **Java8**
 What it does say for itself, it ships a java8 installation and do it upon ubuntu 14.04
 You actually have to be able to exchange it though java7 image, cause flink aims to run also on Java7. For that just replace java8 with your java7 image in *docker-compose-build.yml*
 
-2. Flink
+2. **Flink**
 Also pretty obvious, it's a flink binary.
 
-3. FlinkDev
+3. **FlinkDev**
 Builds upon Flink and ships maven, sbt and new user *dev*, which is stored in ENV DEV_USER
 
-4. Training
+4. **Training**
 Installs Dataasrtisans training artefacts
 
-5. Emacs
+5. **Emacs**
 Enrolls Emacs IDE with preinstalled packages, that are necessary to work with scala code.
