@@ -1,6 +1,6 @@
 # Flink Development Suite
 
-Fast and furious development of apache flink projects
+Fast and furious development of Apache Flink projects
 ---
 
 
