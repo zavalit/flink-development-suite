@@ -2,8 +2,8 @@
   emacs:
     build: .
     volumes: 
-      - ./.sbt:/home/$EMACS_USER/.sbt
-      - ./.ivy2:/home/$EMACS_USER/.ivy2
-      - ./.emacs.d:/home/$EMACS_USER/.emacs.d
+      - ./.sbt:/home/$DEV_USER/.sbt
+      - ./.ivy2:/home/$DEV_USER/.ivy2
+      - ./.emacs.d:/home/$DEV_USER/.emacs.d
     environment:
       - DISPLAY=192.168.99.1:0
