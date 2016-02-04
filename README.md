@@ -10,6 +10,13 @@ It heavily sets on Docker, that's why you have to install [Docker Toolbox](https
 
 Also current version provides [Emacs](https://www.gnu.org/software/emacs/) as IDE, but it also possible to extend it with [Atom](https://atom.io/), [Vim](http://www.vim.org/) or even [Sublime](http://www.sublimetext.com/).
 
+If you are developing on MacOSX, you will also definitely need to forward X11 from VM to host, for that you have to open a socket, which will listen to it:
+
+```
+$ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+```
+how exactly to do it follows up in a wiki post.
+
 ### How to
 
 Get a suite repository
