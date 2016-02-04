@@ -6,4 +6,4 @@
       - ./.ivy2:/home/$DEV_USER/.ivy2
       - ./.emacs.d:/home/$DEV_USER/.emacs.d
     environment:
-      - DISPLAY=192.168.99.1:0
+      - DISPLAY: "192.168.99.1:0"

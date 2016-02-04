@@ -45,6 +45,11 @@ $ eval $(docker-machine env flink-project)
 $ docker-compose -f docker-compose-build.yml build
 ```
 
+and boot it
+```
+$ DEV_USER=dev docker-compose up emacs
+```
+
 at the end you have to see something like this popped up.
 [Emacs](image)
 
