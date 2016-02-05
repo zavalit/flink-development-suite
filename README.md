@@ -15,7 +15,7 @@ If you are developing on MacOSX, you will also definitely need to forward X11 fr
 ```
 $ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 ```
-how exactly to do it follows up in a wiki post.
+how exactly to do it, follows up in that [wiki post](https://github.com/zavalit/flink-development-suite/wiki/Forward-Docker-Container-X11-on-MacOSX).
 
 ### How to
 
