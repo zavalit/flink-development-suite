@@ -1,8 +1,8 @@
 FROM flinkdevelopmentsuite_flinkdev
 
-ENV LAST_UPDATE 28-01-2016
+ENV LAST_UPDATE 05-02-2016
 
-ADD ./flink-training-exercises /opt/flink-training-exercises
+RUN git clone https://github.com/dataArtisans/flink-training-exercises.git /opt/flink-training-exercises
 
 WORKDIR /opt/project
 
