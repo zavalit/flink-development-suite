@@ -59,8 +59,7 @@
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (add-hook 'scala-mode-hook #'yas-minor-mode)
 
-
-
+(custom-set-variables '(ensime-default-java-flags "-Xmx1G"))
 
 ;; ui 
 (when (display-graphic-p)
