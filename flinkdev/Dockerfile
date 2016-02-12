@@ -1,9 +1,14 @@
 FROM flinkdevelopmentsuite_flink
 
 ENV DEV_USER dev
+ENV SCALA_VER 2.11.7
 
 # install maven
 RUN apt-get install -y maven
+
+#install scala
+ADD http://www.scala-lang.org/files/archive/scala-$SCALA_VER.deb scala.deb
+RUN  dpkg -i scala.deb
 
 # install sbt
 RUN \

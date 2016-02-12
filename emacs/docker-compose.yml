@@ -5,9 +5,9 @@
       - ./.sbt:/home/$DEV_USER/.sbt
       - ./.ivy2:/home/$DEV_USER/.ivy2
       - ./.emacs.d:/home/$DEV_USER/.emacs.d
+      - $PWD/:/opt/mounted_project
     environment:
       - DISPLAY=192.168.99.1:0
-      - JAVA_OPTS='-Xmx1G'
     mem_limit: 2000000000
     memswap_limit: 2000000000
     privileged: true
